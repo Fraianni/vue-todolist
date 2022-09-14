@@ -13,6 +13,10 @@
 <body>
     <div id="app">
         <h1>TO-DO-LIST</h1>
+        <div class="input_box">
+            <input type="text" placeholder="Inserire nuovo compito" v-model="new_todo" @keyup.enter="add_todo">
+            <button @click="add_todo"> Aggiungi </button>
+        </div>
         <ul>
             <li v-for="(todo, todo_position) in list">
                 <span @click="change_done(todo)" :class="{overline: todo.done==true}">{{todo.text}}</span>
@@ -21,8 +25,9 @@
             </li>
         </ul>
 
-        <input type="text" placeholder="Inserire nuovo compito" v-model="new_todo" @keyup.enter="add_todo">
-        <button @click="add_todo"> Aggiungi </button>
+
+
+
     </div>
 
     <script src="js/script.js"></script>

@@ -4,12 +4,23 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(56, 88, 152);
+
+}
+
+#app {
+    padding: 10px;
+    color: white;
+}
+
 h1 {
     text-align: center;
 }
 
 ul {
     margin: 50px;
+    list-style-type: square;
 }
 
 li {
@@ -18,12 +29,16 @@ li {
 }
 
 .cross {
-    background-color: aqua;
-    border-radius: 50%;
+    background-color: indianred;
+    padding: 1px;
 }
 
 .overline {
     text-decoration: line-through;
 }
 
-input {}
+.input_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
