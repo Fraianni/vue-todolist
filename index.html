@@ -17,13 +17,31 @@
             <input type="text" placeholder="Inserire nuovo compito" v-model="new_todo" @keyup.enter="add_todo">
             <button @click="add_todo"> Aggiungi </button>
         </div>
-        <ul>
-            <li v-for="(todo, todo_position) in list">
-                <span @click="change_done(todo)" :class="{overline: todo.done==true}">{{todo.text}}</span>
-                <span class="cross" @click="remove_todo(todo_position)">&#10005;
-                </span>
-            </li>
-        </ul>
+
+
+
+        <div class="lists_container">
+            <div class="new_tasks">
+                <h3>Compiti in lista</h3>
+                <ul>
+                    <li v-for="(todo, todo_position) in list">
+                        <span @click="change_done(todo)" :class="{overline: todo.done==true}">{{todo.text}}</span>
+                        <span class="cross" @click="remove_todo(todo_position)">&#10005;</span>
+                        <span @click="achieve_todo(todo,todo_position)" class="for_achieve">Archivia</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="achieved_tasks">
+                <h3>Compiti archiviati</h3>
+                <ul>
+                    <li v-for="(element) in achieved_list">
+                        <span>{{ element.text }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
 
 
 

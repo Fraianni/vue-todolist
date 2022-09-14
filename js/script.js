@@ -26,7 +26,8 @@ const app = new Vue({
             }
 
         ],
-        new_todo: ''
+        new_todo: '',
+        achieved_list: []
     },
 
 
@@ -48,6 +49,11 @@ const app = new Vue({
 
         change_done(todo) {
             todo.done = !todo.done;
+        },
+
+        achieve_todo(todo, todo_position) {
+            this.achieved_list.push(todo);
+            this.remove_todo(todo_position);
         }
 
 

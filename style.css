@@ -42,3 +42,15 @@ li {
     justify-content: center;
     margin-top: 10px;
 }
+
+.lists_container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+
+
+.achieved_tasks {
+    opacity: 0.5;
+}
