@@ -26,7 +26,7 @@ const app = new Vue({
             }
 
         ],
-        order: 0
+        new_todo: ''
     },
 
 
@@ -36,6 +36,14 @@ const app = new Vue({
             let first_part = this.list.slice(0, todo_position);
             let second_part = this.list.slice(todo_position + 1);
             this.list = [...first_part, ...second_part];
+        },
+
+        add_todo() {
+            let clean_todo = { text: this.new_todo.trim(), done: false };
+            this.new_todo = '';
+            if (clean_todo.text.length > 0) {
+                this.list.push(clean_todo);
+            }
         }
 
 
