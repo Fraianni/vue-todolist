@@ -15,7 +15,7 @@
         <h1>TO-DO-LIST</h1>
         <ul>
             <li v-for="(todo, todo_position) in list">
-                <span :class="{overline: todo.done==true}">{{todo.text}}</span>
+                <span @click="change_done(todo)" :class="{overline: todo.done==true}">{{todo.text}}</span>
                 <span class="cross" @click="remove_todo(todo_position)">&#10005;
                 </span>
             </li>

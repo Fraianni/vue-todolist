@@ -44,6 +44,10 @@ const app = new Vue({
             if (clean_todo.text.length > 0) {
                 this.list.push(clean_todo);
             }
+        },
+
+        change_done(todo) {
+            todo.done = !todo.done;
         }
 
 
