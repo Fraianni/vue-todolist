@@ -35,10 +35,6 @@ const app = new Vue({
         remove_todo(todo_position) {
             let first_part = this.list.slice(0, todo_position);
             let second_part = this.list.slice(todo_position + 1);
-            console.log(first_part);
-            console.log(second_part);
-
-
             this.list = [...first_part, ...second_part];
         }
 
